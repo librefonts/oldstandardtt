@@ -1,0 +1,677 @@
+# Bake Begins!
+### (1 of 6) Copy sources
+$ cp -a /home/travis/build/fontdirectory/oldstandardtt/METADATA.json /home/travis/build/fontdirectory/oldstandardtt/builds/build
+$ cp -a /home/travis/build/fontdirectory/oldstandardtt/DESCRIPTION.en_us.html /home/travis/build/fontdirectory/oldstandardtt/builds/build
+$ cp -a OldStandard-Regular.ttf.ttx OldStandard-Italic.ttf.ttx OldStandard-Bold.ttf.ttx OldStandard-Regular.ttf._p_r_e_p.ttx OldStandard-Regular.ttf._p_o_s_t.ttx OldStandard-Regular.ttf._n_a_m_e.ttx OldStandard-Regular.ttf._m_a_x_p.ttx OldStandard-Regular.ttf._l_o_c_a.ttx OldStandard-Regular.ttf._k_e_r_n.ttx OldStandard-Regular.ttf._h_m_t_x.ttx OldStandard-Regular.ttf._h_h_e_a.ttx OldStandard-Regular.ttf._h_e_a_d.ttx OldStandard-Regular.ttf._g_l_y_f.ttx OldStandard-Regular.ttf._g_a_s_p.ttx OldStandard-Regular.ttf._f_p_g_m.ttx OldStandard-Regular.ttf._c_v_t.ttx OldStandard-Regular.ttf._c_m_a_p.ttx OldStandard-Regular.ttf.O_S_2f_2.ttx OldStandard-Regular.ttf.GlyphOrder.ttx OldStandard-Regular.ttf.F_F_T_M_.ttx OldStandard-Italic.ttf._p_r_e_p.ttx OldStandard-Italic.ttf._p_o_s_t.ttx OldStandard-Italic.ttf._n_a_m_e.ttx OldStandard-Italic.ttf._m_a_x_p.ttx OldStandard-Italic.ttf._l_o_c_a.ttx OldStandard-Italic.ttf._h_m_t_x.ttx OldStandard-Italic.ttf._h_h_e_a.ttx OldStandard-Italic.ttf._h_e_a_d.ttx OldStandard-Italic.ttf._g_l_y_f.ttx OldStandard-Italic.ttf._g_a_s_p.ttx OldStandard-Italic.ttf._f_p_g_m.ttx OldStandard-Italic.ttf._c_v_t.ttx OldStandard-Italic.ttf._c_m_a_p.ttx OldStandard-Italic.ttf.O_S_2f_2.ttx OldStandard-Italic.ttf.GlyphOrder.ttx OldStandard-Italic.ttf.G_S_U_B_.ttx OldStandard-Italic.ttf.G_P_O_S_.ttx OldStandard-Italic.ttf.G_D_E_F_.ttx OldStandard-Italic.ttf.F_F_T_M_.ttx OldStandard-Bold.ttf._p_r_e_p.ttx OldStandard-Bold.ttf._p_o_s_t.ttx OldStandard-Bold.ttf._n_a_m_e.ttx OldStandard-Bold.ttf._m_a_x_p.ttx OldStandard-Bold.ttf._l_o_c_a.ttx OldStandard-Bold.ttf._k_e_r_n.ttx OldStandard-Bold.ttf._h_m_t_x.ttx OldStandard-Bold.ttf._h_h_e_a.ttx OldStandard-Bold.ttf._h_e_a_d.ttx OldStandard-Bold.ttf._g_l_y_f.ttx OldStandard-Bold.ttf._g_a_s_p.ttx OldStandard-Bold.ttf._f_p_g_m.ttx OldStandard-Bold.ttf._c_v_t.ttx OldStandard-Bold.ttf._c_m_a_p.ttx OldStandard-Bold.ttf.O_S_2f_2.ttx OldStandard-Bold.ttf.GlyphOrder.ttx OldStandard-Bold.ttf.F_F_T_M_.ttx /home/travis/build/fontdirectory/oldstandardtt/builds/build/sources
+### (2 of 6) pyfontaine
+### (3 of 6) Run upstream tests
+$ fontbakery-check.py upstream-repo sources
+$ fontaine --collections subsets --text /home/travis/build/fontdirectory/oldstandardtt/builds/build/sources/OldStandard-Bold.ttf.ttx /home/travis/build/fontdirectory/oldstandardtt/builds/build/sources/OldStandard-Italic.ttf.ttx /home/travis/build/fontdirectory/oldstandardtt/builds/build/sources/OldStandard-Regular.ttf.ttx > fontaine.txt
+WARNING: Please install [PyICU](https://pypi.python.org/pypi/PyICU) toenable [feature], perhaps with: pip install pyicu
+end of pyfontaine process
+bakery_lint.tests.upstream.test_prepolation.FontTestPrepolation.test_font_prepolation_glyph_contours(): OK
+bakery_lint.tests.upstream.test_prepolation.FontTestPrepolation.test_font_prepolation_glyph_points(): OK
+bakery_lint.tests.upstream.test_prepolation.FontTestPrepolation.test_font_test_prepolation_glyph_names(): OK
+bakery_lint.tests.upstream.test_diacritic.TestDiacritic.test_diacritic_made_as_component(): OK
+bakery_lint.tests.upstream.test_diacritic.TestDiacritic.test_diacritic_made_as_mark_to_mark(): OK
+bakery_lint.tests.upstream.test_diacritic.TestDiacritic.test_diacritic_made_as_own_glyphs(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_bakery_yaml_exists(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_copyright_notices_same_across_family(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_description_html_exists(): OK
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_fontlog_txt_exists(): FAIL
+bakery_lint.tests.upstream.test_check_upstream_sources.ProjectUpstreamTestCase.test_metadata_json_exists(): OK
+$ fontbakery-check.py upstream-ttx OldStandard-Bold.ttf.ttx
+bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars.TestGlyphNameDoesNotContainsDisallowedChars.test_glyphname_does_not_contain_disallowed_chars(): FAIL
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): FAIL
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/sources/OldStandard-Bold.ttf.ttx /home/travis/build/fontdirectory/oldstandardtt/builds/build/sources/OldStandardTT-Bold.ttx
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_epar_in_keys(): FAIL
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_os2_in_keys(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_ttx_doesnt_contain_duplicate_glyphs(): OK
+bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations.TTX_FontFamilyNamingTest.test_ttx_family_naming_recommendation(): OK
+$ fontbakery-check.py upstream-ttx OldStandard-Italic.ttf.ttx
+bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars.TestGlyphNameDoesNotContainsDisallowedChars.test_glyphname_does_not_contain_disallowed_chars(): FAIL
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): FAIL
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/sources/OldStandard-Italic.ttf.ttx /home/travis/build/fontdirectory/oldstandardtt/builds/build/sources/OldStandardTT-Italic.ttx
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_epar_in_keys(): FAIL
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_os2_in_keys(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_ttx_doesnt_contain_duplicate_glyphs(): OK
+bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations.TTX_FontFamilyNamingTest.test_ttx_family_naming_recommendation(): OK
+$ fontbakery-check.py upstream-ttx OldStandard-Regular.ttf.ttx
+bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars.TestGlyphNameDoesNotContainsDisallowedChars.test_glyphname_does_not_contain_disallowed_chars(): FAIL
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): FAIL
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/sources/OldStandard-Regular.ttf.ttx /home/travis/build/fontdirectory/oldstandardtt/builds/build/sources/OldStandardTT-Regular.ttx
+bakery_lint.tests.upstream.test_font_filename_eq_familystyle.TestTTFSourceFontFileNameEqualsFamilyStyle.test_source_ttf_font_filename_equals_familystyle(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_epar_in_keys(): FAIL
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_os2_in_keys(): OK
+bakery_lint.tests.upstream.test_check_ttx_requirements.SourceTTXTest.test_ttx_doesnt_contain_duplicate_glyphs(): OK
+bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations.TTX_FontFamilyNamingTest.test_ttx_family_naming_recommendation(): OK
+### (4 of 6) Convert sources to TTF
+$ ttx -d /home/travis/build/fontdirectory/oldstandardtt/builds/build /home/travis/build/fontdirectory/oldstandardtt/builds/build/sources/OldStandardTT-Regular.ttx /home/travis/build/fontdirectory/oldstandardtt/builds/build/sources/OldStandardTT-Italic.ttx /home/travis/build/fontdirectory/oldstandardtt/builds/build/sources/OldStandardTT-Bold.ttx
+Compiling "/home/travis/build/fontdirectory/oldstandardtt/builds/build/sources/OldStandardTT-Regular.ttx" to "/home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf"...
+Parsing 'GlyphOrder' table...
+Parsing 'head' table...
+Parsing 'hhea' table...
+Parsing 'maxp' table...
+Parsing 'OS/2' table...
+Parsing 'hmtx' table...
+Parsing 'cmap' table...
+Parsing 'fpgm' table...
+Parsing 'prep' table...
+Parsing 'cvt ' table...
+Parsing 'loca' table...
+Parsing 'glyf' table...
+Parsing 'kern' table...
+Parsing 'name' table...
+Parsing 'post' table...
+Parsing 'gasp' table...
+Parsing 'FFTM' table...
+Compiling "/home/travis/build/fontdirectory/oldstandardtt/builds/build/sources/OldStandardTT-Italic.ttx" to "/home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf"...
+Parsing 'GlyphOrder' table...
+Parsing 'head' table...
+Parsing 'hhea' table...
+Parsing 'maxp' table...
+Parsing 'OS/2' table...
+Parsing 'hmtx' table...
+Parsing 'cmap' table...
+Parsing 'fpgm' table...
+Parsing 'prep' table...
+Parsing 'cvt ' table...
+Parsing 'loca' table...
+Parsing 'glyf' table...
+Parsing 'name' table...
+Parsing 'post' table...
+Parsing 'gasp' table...
+Parsing 'FFTM' table...
+Parsing 'GDEF' table...
+Parsing 'GPOS' table...
+Parsing 'GSUB' table...
+Compiling "/home/travis/build/fontdirectory/oldstandardtt/builds/build/sources/OldStandardTT-Bold.ttx" to "/home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf"...
+Parsing 'GlyphOrder' table...
+Parsing 'head' table...
+Parsing 'hhea' table...
+Parsing 'maxp' table...
+Parsing 'OS/2' table...
+Parsing 'hmtx' table...
+Parsing 'cmap' table...
+Parsing 'fpgm' table...
+Parsing 'prep' table...
+Parsing 'cvt ' table...
+Parsing 'loca' table...
+Parsing 'glyf' table...
+Parsing 'kern' table...
+Parsing 'name' table...
+Parsing 'post' table...
+Parsing 'gasp' table...
+Parsing 'FFTM' table...
+### Test OldStandardTT-Regular.ttf
+$ fontbakery-check.py result OldStandardTT-Regular.ttf
+bakery_lint.tests.downstream.test_names_are_ascii_only.CheckNamesAreASCIIOnly.test_check_names_are_ascii_only(): OK
+bakery_lint.tests.downstream.test_gpos_table_has_kerning_info.CheckGposTableHasKerningInfo.test_gpos_table_has_kerning_info(): FAIL
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): FAIL
+$ fontbakery-fix-gasp.py --set=15 /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf.fix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): OK
+$ fontbakery-fix-gasp.py --set=15 /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf.fix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf
+Bad kern pair: glyphs 35 & 65535 must be less than 219
+Bad kern pair: glyphs 36 & 65535 must be less than 219
+Bad kern pair: glyphs 37 & 65535 must be less than 219
+Bad kern pair: glyphs 38 & 65535 must be less than 219
+Bad kern pair: glyphs 40 & 65535 must be less than 219
+Bad kern pair: glyphs 41 & 65535 must be less than 219
+Bad kern pair: glyphs 44 & 65535 must be less than 219
+Bad kern pair: glyphs 45 & 65535 must be less than 219
+Bad kern pair: glyphs 46 & 65535 must be less than 219
+Bad kern pair: glyphs 48 & 65535 must be less than 219
+Bad kern pair: glyphs 49 & 65535 must be less than 219
+Bad kern pair: glyphs 50 & 65535 must be less than 219
+Bad kern pair: glyphs 52 & 65535 must be less than 219
+Bad kern pair: glyphs 53 & 65535 must be less than 219
+Bad kern pair: glyphs 54 & 65535 must be less than 219
+Bad kern pair: glyphs 55 & 65535 must be less than 219
+Bad kern pair: glyphs 56 & 65535 must be less than 219
+Bad kern pair: glyphs 57 & 65535 must be less than 219
+Bad kern pair: glyphs 58 & 65535 must be less than 219
+Bad kern pair: glyphs 59 & 65535 must be less than 219
+Bad kern pair: glyphs 67 & 65535 must be less than 219
+Bad kern pair: glyphs 68 & 65535 must be less than 219
+Bad kern pair: glyphs 81 & 65535 must be less than 219
+Bad kern pair: glyphs 82 & 65535 must be less than 219
+Bad kern pair: glyphs 88 & 65535 must be less than 219
+Bad kern pair: glyphs 89 & 65535 must be less than 219
+Bad kern pair: glyphs 90 & 65535 must be less than 219
+Bad kern pair: glyphs 91 & 65535 must be less than 219
+Bad kern pair: glyphs 128 & 65535 must be less than 219
+Bad kern pair: glyphs 129 & 65535 must be less than 219
+Bad kern pair: glyphs 130 & 65535 must be less than 219
+Bad kern pair: glyphs 131 & 65535 must be less than 219
+Bad kern pair: glyphs 132 & 65535 must be less than 219
+Bad kern pair: glyphs 133 & 65535 must be less than 219
+Bad kern pair: glyphs 135 & 65535 must be less than 219
+Bad kern pair: glyphs 144 & 65535 must be less than 219
+Bad kern pair: glyphs 145 & 65535 must be less than 219
+Bad kern pair: glyphs 146 & 65535 must be less than 219
+Bad kern pair: glyphs 147 & 65535 must be less than 219
+Bad kern pair: glyphs 148 & 65535 must be less than 219
+Bad kern pair: glyphs 149 & 65535 must be less than 219
+Bad kern pair: glyphs 152 & 65535 must be less than 219
+Bad kern pair: glyphs 153 & 65535 must be less than 219
+Bad kern pair: glyphs 154 & 65535 must be less than 219
+Bad kern pair: glyphs 155 & 65535 must be less than 219
+Bad kern pair: glyphs 156 & 65535 must be less than 219
+Bad kern pair: glyphs 159 & 65535 must be less than 219
+Bad kern pair: glyphs 160 & 65535 must be less than 219
+Bad kern pair: glyphs 161 & 65535 must be less than 219
+Bad kern pair: glyphs 162 & 65535 must be less than 219
+Bad kern pair: glyphs 163 & 65535 must be less than 219
+Bad kern pair: glyphs 164 & 65535 must be less than 219
+Bad kern pair: glyphs 177 & 65535 must be less than 219
+Bad kern pair: glyphs 178 & 65535 must be less than 219
+Bad kern pair: glyphs 179 & 65535 must be less than 219
+Bad kern pair: glyphs 180 & 65535 must be less than 219
+Bad kern pair: glyphs 181 & 65535 must be less than 219
+Bad kern pair: glyphs 188 & 65535 must be less than 219
+Bad kern pair: glyphs 189 & 65535 must be less than 219
+Bad kern pair: glyphs 190 & 65535 must be less than 219
+Bad kern pair: glyphs 200 & 65535 must be less than 219
+Bad kern pair: glyphs 203 & 65535 must be less than 219
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_unicode_codepoints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_flipped_reference_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_anchors(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_extrema_in_glyphs(): FAIL
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_overlapped_hints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_integer_aligned(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_not_too_far_apart(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_hints_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_referenced_glyphs_are_present(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_glyph_names(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_length_instructions(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_glyph_intersect(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_open_contours(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_wrong_direction_in_glyphs(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalLinegapMetrics.test_metrics_linegaps_are_zero(): FAIL
+$ fontbakery-fix-vertical-metrics.py --autofix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf.fix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf.fix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf.fix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf
+$ fontbakery-fix-vertical-metrics.py /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf
+Parameter              OldStandardTT-Regular.ttf    OldStandardTT-Bold.ttf    OldStandardTT-Italic.ttf    
+ymax                   948                          948                       948                         
+hhea.ascent            948                          948                       948                         
+OS/2.sTypoAscender     948                          948                       948                         
+OS/2.usWinAscent       948                          948                       948                         
+ymin                   -282                         -282                      -282                        
+hhea.descent           -282                         -282                      -282                        
+OS/2.sTypoDescender    -282                         -282                      -282                        
+OS/2.usWinDescent      282                          282                       282                         
+hhea.lineGap           0                            0                         0                           
+OS/2.sTypoLineGap      0                            0                         0                           
+hhea total             1230                         1230                      1230                        
+typo total             1230                         1230                      1230                        
+win total              1230                         1230                      1230                        
+UPM:Heights            1000:1230                    1000:1230                 1000:1230                   
+UPM:Heights %          123 %                        123 %                     123 %                       
+
+
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalLinegapMetrics.test_metrics_linegaps_are_zero(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalAscentMetrics.test_metrics_ascents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalDescentMetrics.test_metrics_descents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_upm_heights_less_120.TestCheckUPMHeightsLess120.test_check_upm_heigths_less_120(): FAIL
+bakery_lint.tests.downstream.test_check_unused_glyph_data.CheckUnusedGlyphData.test_check_unused_glyph_data(): ERROR
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+$ fontbakery-fix-glyph-private-encoding.py --autofix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf.fix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+bakery_lint.tests.downstream.test_check_panose_identification.CheckPanoseIdentification.test_check_panose_identification(): OK
+bakery_lint.tests.downstream.test_check_os2_width_class.CheckOS2WidthClass.test_check_os2_width_class(): OK
+bakery_lint.tests.downstream.test_check_no_problematic_formats.CheckNoProblematicFormats.test_check_no_problematic_formats(): OK
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+$ fontbakery-fix-nbsp.py /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf.fix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+bakery_lint.tests.downstream.test_check_names_same_across_platforms.CheckNamesSameAcrossPlatforms.test_check_names_same_across_platforms(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckStyleNameRecommendation.test_check_stylename_is_under_recommendations(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): FAIL
+$ fontbakery-fix-opentype-names.py /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf.fix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTStyleNameRecommendation.test_check_opentype_stylename(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFullNameRecommendation.test_check_opentype_fullname(): OK
+bakery_lint.tests.downstream.test_check_magic_prep_code.CheckMagicPREPByteCode.test_prep_magic_code(): FAIL
+bakery_lint.tests.downstream.test_check_license_included.CheckLicenseIncluded.test_license_included_in_font_names(): OK
+bakery_lint.tests.downstream.test_check_italic_angle_agreement.CheckItalicAngleAgreement.test_check_italic_angle_agreement(): OK
+bakery_lint.tests.downstream.test_check_hmtx_hhea_max_advance_width_agreement.CheckHmtxHheaMaxAdvanceWidthAgreement.test_check_hmtx_hhea_max_advance_width_agreement(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_euro(): FAIL
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_nbsp(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_space(): OK
+bakery_lint.tests.downstream.test_check_glyf_table_length.CheckGlyfTableLength.test_check_glyf_table_length(): FAIL
+bakery_lint.tests.downstream.test_check_full_font_name_begins_with_family_name.CheckFullFontNameBeginsWithFamilyName.test_check_full_font_name_begins_with_family_name(): OK
+bakery_lint.tests.downstream.test_check_fontname_matches_macstyle.CheckFontNameEqualToMacStyleFlags.test_fontname_is_equal_to_macstyle(): FAIL
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): FAIL
+$ fontbakery-fix-dsig.py /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf.fix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): OK
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasNotKernTable.test_no_kern_table_exists(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFsTypeIsNotSet.test_is_fstype_not_set(): OK
+$ fontbakery-fix-fstype.py --autofix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf.fix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_em_is_1000(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_font_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_latin_file_exists(): FAIL
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_menu_file_exists(): FAIL
+### Optimize TTF OldStandardTT-Regular.ttf
+$ ls -l 'OldStandardTT-Regular.ttf'* # look at the size savings of that subset process
+OldStandardTT-Regular.ttf.opt: 53272 bytes
+OldStandardTT-Regular.ttf: 59420 bytes
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf.opt /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf
+### Autohint TTFs (ttfautohint) OldStandardTT-Regular.ttf
+$ ttfautohint -l 7 -r 28 -G 50 -x 13 -w "G" /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf '/home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.autohint.ttf'
+
+$ ls -l /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.*ttf # look at the size savings of that subset process
+/home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf: 53272 bytes
+/home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.autohint.ttf: 46800 bytes
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.autohint.ttf /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf
+### Subset TTFs (pyftsubset) OldStandardTT-Regular.ttf
+$ pyftsubset OldStandardTT-Regular.latin
+$ pyftsubset OldStandardTT-Regular.menu
+strippedname:/home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Regular.ttf
+spaceWidth is    280
+nbspWidth is     280
+Nothing to do
+### Test OldStandardTT-Italic.ttf
+$ fontbakery-check.py result OldStandardTT-Italic.ttf
+bakery_lint.tests.downstream.test_names_are_ascii_only.CheckNamesAreASCIIOnly.test_check_names_are_ascii_only(): OK
+bakery_lint.tests.downstream.test_gpos_table_has_kerning_info.CheckGposTableHasKerningInfo.test_gpos_table_has_kerning_info(): ERROR
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): FAIL
+$ fontbakery-fix-gasp.py --set=15 /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf.fix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): OK
+$ fontbakery-fix-gasp.py --set=15 /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf.fix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_unicode_codepoints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_flipped_reference_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_anchors(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_extrema_in_glyphs(): FAIL
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_overlapped_hints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_integer_aligned(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_not_too_far_apart(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_hints_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_referenced_glyphs_are_present(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_glyph_names(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_length_instructions(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_glyph_intersect(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_open_contours(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_wrong_direction_in_glyphs(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalLinegapMetrics.test_metrics_linegaps_are_zero(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalAscentMetrics.test_metrics_ascents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalDescentMetrics.test_metrics_descents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_upm_heights_less_120.TestCheckUPMHeightsLess120.test_check_upm_heigths_less_120(): FAIL
+bakery_lint.tests.downstream.test_check_unused_glyph_data.CheckUnusedGlyphData.test_check_unused_glyph_data(): ERROR
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+$ fontbakery-fix-glyph-private-encoding.py --autofix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf.fix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+bakery_lint.tests.downstream.test_check_panose_identification.CheckPanoseIdentification.test_check_panose_identification(): OK
+bakery_lint.tests.downstream.test_check_os2_width_class.CheckOS2WidthClass.test_check_os2_width_class(): OK
+bakery_lint.tests.downstream.test_check_no_problematic_formats.CheckNoProblematicFormats.test_check_no_problematic_formats(): OK
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+$ fontbakery-fix-nbsp.py /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf.fix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+bakery_lint.tests.downstream.test_check_names_same_across_platforms.CheckNamesSameAcrossPlatforms.test_check_names_same_across_platforms(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckStyleNameRecommendation.test_check_stylename_is_under_recommendations(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): FAIL
+$ fontbakery-fix-opentype-names.py /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf.fix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTStyleNameRecommendation.test_check_opentype_stylename(): FAIL
+$ fontbakery-fix-opentype-names.py /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf.fix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTStyleNameRecommendation.test_check_opentype_stylename(): FAIL
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFullNameRecommendation.test_check_opentype_fullname(): OK
+bakery_lint.tests.downstream.test_check_magic_prep_code.CheckMagicPREPByteCode.test_prep_magic_code(): FAIL
+bakery_lint.tests.downstream.test_check_license_included.CheckLicenseIncluded.test_license_included_in_font_names(): OK
+bakery_lint.tests.downstream.test_check_italic_angle_agreement.CheckItalicAngleAgreement.test_check_italic_angle_agreement(): OK
+bakery_lint.tests.downstream.test_check_hmtx_hhea_max_advance_width_agreement.CheckHmtxHheaMaxAdvanceWidthAgreement.test_check_hmtx_hhea_max_advance_width_agreement(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_euro(): FAIL
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_nbsp(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_space(): OK
+bakery_lint.tests.downstream.test_check_glyf_table_length.CheckGlyfTableLength.test_check_glyf_table_length(): FAIL
+bakery_lint.tests.downstream.test_check_full_font_name_begins_with_family_name.CheckFullFontNameBeginsWithFamilyName.test_check_full_font_name_begins_with_family_name(): OK
+bakery_lint.tests.downstream.test_check_fontname_matches_macstyle.CheckFontNameEqualToMacStyleFlags.test_fontname_is_equal_to_macstyle(): FAIL
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): FAIL
+$ fontbakery-fix-dsig.py /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf.fix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): OK
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasNotKernTable.test_no_kern_table_exists(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFsTypeIsNotSet.test_is_fstype_not_set(): OK
+$ fontbakery-fix-fstype.py --autofix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf.fix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_em_is_1000(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_font_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_latin_file_exists(): FAIL
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_menu_file_exists(): FAIL
+### Optimize TTF OldStandardTT-Italic.ttf
+$ ls -l 'OldStandardTT-Italic.ttf'* # look at the size savings of that subset process
+OldStandardTT-Italic.ttf.opt: 57272 bytes
+OldStandardTT-Italic.ttf: 65304 bytes
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf.opt /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf
+### Autohint TTFs (ttfautohint) OldStandardTT-Italic.ttf
+$ ttfautohint -l 7 -r 28 -G 50 -x 13 -w "G" /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf '/home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.autohint.ttf'
+
+$ ls -l /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.*ttf # look at the size savings of that subset process
+/home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf: 57272 bytes
+/home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.autohint.ttf: 46440 bytes
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.autohint.ttf /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf
+### Subset TTFs (pyftsubset) OldStandardTT-Italic.ttf
+$ pyftsubset OldStandardTT-Italic.latin
+$ pyftsubset OldStandardTT-Italic.menu
+strippedname:/home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Italic.ttf
+spaceWidth is    280
+nbspWidth is     280
+Nothing to do
+### Test OldStandardTT-Bold.ttf
+$ fontbakery-check.py result OldStandardTT-Bold.ttf
+bakery_lint.tests.downstream.test_names_are_ascii_only.CheckNamesAreASCIIOnly.test_check_names_are_ascii_only(): OK
+bakery_lint.tests.downstream.test_gpos_table_has_kerning_info.CheckGposTableHasKerningInfo.test_gpos_table_has_kerning_info(): FAIL
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): FAIL
+$ fontbakery-fix-gasp.py --set=15 /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf.fix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf
+bakery_lint.tests.downstream.test_gasp_table_value.CheckGaspTableType.test_check_gasp_table_type(): OK
+$ fontbakery-fix-gasp.py --set=15 /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf.fix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf
+Bad kern pair: glyphs 35 & 65535 must be less than 216
+Bad kern pair: glyphs 36 & 65535 must be less than 216
+Bad kern pair: glyphs 37 & 65535 must be less than 216
+Bad kern pair: glyphs 38 & 65535 must be less than 216
+Bad kern pair: glyphs 40 & 65535 must be less than 216
+Bad kern pair: glyphs 41 & 65535 must be less than 216
+Bad kern pair: glyphs 44 & 65535 must be less than 216
+Bad kern pair: glyphs 45 & 65535 must be less than 216
+Bad kern pair: glyphs 46 & 65535 must be less than 216
+Bad kern pair: glyphs 48 & 65535 must be less than 216
+Bad kern pair: glyphs 49 & 65535 must be less than 216
+Bad kern pair: glyphs 50 & 65535 must be less than 216
+Bad kern pair: glyphs 52 & 65535 must be less than 216
+Bad kern pair: glyphs 53 & 65535 must be less than 216
+Bad kern pair: glyphs 54 & 65535 must be less than 216
+Bad kern pair: glyphs 55 & 65535 must be less than 216
+Bad kern pair: glyphs 56 & 65535 must be less than 216
+Bad kern pair: glyphs 57 & 65535 must be less than 216
+Bad kern pair: glyphs 58 & 65535 must be less than 216
+Bad kern pair: glyphs 59 & 65535 must be less than 216
+Bad kern pair: glyphs 67 & 65535 must be less than 216
+Bad kern pair: glyphs 68 & 65535 must be less than 216
+Bad kern pair: glyphs 81 & 65535 must be less than 216
+Bad kern pair: glyphs 82 & 65535 must be less than 216
+Bad kern pair: glyphs 88 & 65535 must be less than 216
+Bad kern pair: glyphs 89 & 65535 must be less than 216
+Bad kern pair: glyphs 90 & 65535 must be less than 216
+Bad kern pair: glyphs 91 & 65535 must be less than 216
+Bad kern pair: glyphs 128 & 65535 must be less than 216
+Bad kern pair: glyphs 129 & 65535 must be less than 216
+Bad kern pair: glyphs 130 & 65535 must be less than 216
+Bad kern pair: glyphs 131 & 65535 must be less than 216
+Bad kern pair: glyphs 132 & 65535 must be less than 216
+Bad kern pair: glyphs 133 & 65535 must be less than 216
+Bad kern pair: glyphs 135 & 65535 must be less than 216
+Bad kern pair: glyphs 144 & 65535 must be less than 216
+Bad kern pair: glyphs 145 & 65535 must be less than 216
+Bad kern pair: glyphs 146 & 65535 must be less than 216
+Bad kern pair: glyphs 147 & 65535 must be less than 216
+Bad kern pair: glyphs 148 & 65535 must be less than 216
+Bad kern pair: glyphs 149 & 65535 must be less than 216
+Bad kern pair: glyphs 152 & 65535 must be less than 216
+Bad kern pair: glyphs 153 & 65535 must be less than 216
+Bad kern pair: glyphs 154 & 65535 must be less than 216
+Bad kern pair: glyphs 155 & 65535 must be less than 216
+Bad kern pair: glyphs 156 & 65535 must be less than 216
+Bad kern pair: glyphs 159 & 65535 must be less than 216
+Bad kern pair: glyphs 160 & 65535 must be less than 216
+Bad kern pair: glyphs 161 & 65535 must be less than 216
+Bad kern pair: glyphs 162 & 65535 must be less than 216
+Bad kern pair: glyphs 163 & 65535 must be less than 216
+Bad kern pair: glyphs 164 & 65535 must be less than 216
+Bad kern pair: glyphs 177 & 65535 must be less than 216
+Bad kern pair: glyphs 178 & 65535 must be less than 216
+Bad kern pair: glyphs 179 & 65535 must be less than 216
+Bad kern pair: glyphs 180 & 65535 must be less than 216
+Bad kern pair: glyphs 181 & 65535 must be less than 216
+Bad kern pair: glyphs 188 & 65535 must be less than 216
+Bad kern pair: glyphs 189 & 65535 must be less than 216
+Bad kern pair: glyphs 190 & 65535 must be less than 216
+Bad kern pair: glyphs 199 & 65535 must be less than 216
+Bad kern pair: glyphs 202 & 65535 must be less than 216
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_paths_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_composite_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_allowed_numbers_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_duplicate_unicode_codepoints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_flipped_reference_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_anchors(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_missing_extrema_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_overlapped_hints(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_integer_aligned(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_points_are_not_too_far_apart(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_hints_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_postscript_hasnt_limit_points_in_glyphs(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_referenced_glyphs_are_present(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_glyph_names(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_valid_length_instructions(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_glyph_intersect(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_validation_open_contours(): OK
+bakery_lint.tests.downstream.test_fontforge_validation_state.FontForgeValidateStateTest.test_wrong_direction_in_glyphs(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalLinegapMetrics.test_metrics_linegaps_are_zero(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalAscentMetrics.test_metrics_ascents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_vertical_metrics.CheckVerticalDescentMetrics.test_metrics_descents_equal_bbox(): OK
+bakery_lint.tests.downstream.test_check_upm_heights_less_120.TestCheckUPMHeightsLess120.test_check_upm_heigths_less_120(): FAIL
+bakery_lint.tests.downstream.test_check_unused_glyph_data.CheckUnusedGlyphData.test_check_unused_glyph_data(): ERROR
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+$ fontbakery-fix-glyph-private-encoding.py --autofix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf.fix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf
+bakery_lint.tests.downstream.test_check_unencoded_glyph.TestFontUnencodedGlyph.test_font_unencoded_glyphs(): FAIL
+bakery_lint.tests.downstream.test_check_panose_identification.CheckPanoseIdentification.test_check_panose_identification(): OK
+bakery_lint.tests.downstream.test_check_os2_width_class.CheckOS2WidthClass.test_check_os2_width_class(): OK
+bakery_lint.tests.downstream.test_check_no_problematic_formats.CheckNoProblematicFormats.test_check_no_problematic_formats(): OK
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+$ fontbakery-fix-nbsp.py /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf.fix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf
+bakery_lint.tests.downstream.test_check_nbsp_width_matches_sp_width.CheckNbspWidthMatchesSpWidth.test_check_nbsp_width_matches_sp_width(): FAIL
+bakery_lint.tests.downstream.test_check_names_same_across_platforms.CheckNamesSameAcrossPlatforms.test_check_names_same_across_platforms(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckStyleNameRecommendation.test_check_stylename_is_under_recommendations(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): FAIL
+$ fontbakery-fix-opentype-names.py /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf.fix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFamilyNameRecommendation.test_check_opentype_familyname(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTStyleNameRecommendation.test_check_opentype_stylename(): OK
+bakery_lint.tests.downstream.test_check_name_table_recommendation.CheckOTFullNameRecommendation.test_check_opentype_fullname(): OK
+bakery_lint.tests.downstream.test_check_magic_prep_code.CheckMagicPREPByteCode.test_prep_magic_code(): FAIL
+bakery_lint.tests.downstream.test_check_license_included.CheckLicenseIncluded.test_license_included_in_font_names(): OK
+bakery_lint.tests.downstream.test_check_italic_angle_agreement.CheckItalicAngleAgreement.test_check_italic_angle_agreement(): OK
+bakery_lint.tests.downstream.test_check_hmtx_hhea_max_advance_width_agreement.CheckHmtxHheaMaxAdvanceWidthAgreement.test_check_hmtx_hhea_max_advance_width_agreement(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_euro(): FAIL
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_nbsp(): OK
+bakery_lint.tests.downstream.test_check_glyph_existence.CheckGlyphExistence.test_space(): OK
+bakery_lint.tests.downstream.test_check_glyf_table_length.CheckGlyfTableLength.test_check_glyf_table_length(): FAIL
+bakery_lint.tests.downstream.test_check_full_font_name_begins_with_family_name.CheckFullFontNameBeginsWithFamilyName.test_check_full_font_name_begins_with_family_name(): OK
+bakery_lint.tests.downstream.test_check_fontname_matches_macstyle.CheckFontNameEqualToMacStyleFlags.test_fontname_is_equal_to_macstyle(): FAIL
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): FAIL
+$ fontbakery-fix-dsig.py /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf.fix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasDsigTable.test_check_font_has_dsig_table(): OK
+bakery_lint.tests.downstream.test_check_font_tables.CheckFontHasNotKernTable.test_no_kern_table_exists(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFsTypeIsNotSet.test_is_fstype_not_set(): OK
+$ fontbakery-fix-fstype.py --autofix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf.fix /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_em_is_1000(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_font_is_font(): OK
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_latin_file_exists(): FAIL
+bakery_lint.tests.downstream.test_check_font_agreements.CheckFontAgreements.test_menu_file_exists(): FAIL
+### Optimize TTF OldStandardTT-Bold.ttf
+$ ls -l 'OldStandardTT-Bold.ttf'* # look at the size savings of that subset process
+OldStandardTT-Bold.ttf.opt: 54480 bytes
+OldStandardTT-Bold.ttf: 60544 bytes
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf.opt /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf
+### Autohint TTFs (ttfautohint) OldStandardTT-Bold.ttf
+$ ttfautohint -l 7 -r 28 -G 50 -x 13 -w "G" /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf '/home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.autohint.ttf'
+
+$ ls -l /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.*ttf # look at the size savings of that subset process
+/home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf: 54480 bytes
+/home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.autohint.ttf: 48124 bytes
+$ mv /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.autohint.ttf /home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf
+### Subset TTFs (pyftsubset) OldStandardTT-Bold.ttf
+$ pyftsubset OldStandardTT-Bold.latin
+$ pyftsubset OldStandardTT-Bold.menu
+strippedname:/home/travis/build/fontdirectory/oldstandardtt/builds/build/OldStandardTT-Bold.ttf
+spaceWidth is    280
+nbspWidth is     280
+Nothing to do
+### (5 of 6) Generate METADATA.json (fontbakery-build-metadata.py)
+$ fontbakery-build-metadata.py /home/travis/build/fontdirectory/oldstandardtt/builds/build
+{} exists
+Designer's name from font is: Alexey Kryukov <alexios@thessalonica.org.ru>
+Original size: 46800\nGzip size: 24080
+Family Name: Old Standard TT
+PS Name: OldStandardTT-Bold
+Full Name: Old Standard TT Bold
+Style: normal
+Weight: 700
+Filename: OldStandardTT-Bold.ttf
+Copyright: Copyright (C) 2006-2008 Alexey Kryukov <alexios@thessalonica.org.ru>
+Family Name: Old Standard TT
+PS Name: OldStandardTT-Italic
+Full Name: Old Standard TT Italic
+Style: italic
+Weight: 400
+Filename: OldStandardTT-Italic.ttf
+Copyright: Copyright (c) 2006-2008 by Alexey Kryukov
+Family Name: Old Standard TT
+PS Name: OldStandardTT-Regular
+Full Name: Old Standard TT Regular
+Style: normal
+Weight: 400
+Filename: OldStandardTT-Regular.ttf
+Copyright: Copyright (C) 2006-2008 Alexey Kryukov <alexios@thessalonica.org.ru>
+### (6 of 6) Run tests for METADATA.json
+$ fontbakery-check.py metadata METADATA.json
+bakery_lint.tests.metadata_test.MetadataSubsetsListTest.test_charset_latin(): FAIL
+bakery_lint.tests.metadata_test.MetadataSubsetsListTest.test_charset_menu(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_description_is_more_than_500b(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_description_is_valid_html(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_daltonmaag_catalogue(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_fontbureau_catalogue(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_fontscom_catalogue(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_fontshop_catalogue(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_fontsmith_catalogue(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_houseind_catalogue(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_myfonts_catalogue(): FAIL
+bakery_lint.tests.metadata_test.MetadataTest.test_does_not_familyName_exist_in_veer_catalogue(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_family_is_listed_in_gwf(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_atleast_latin_menu_subsets_exist(): OK
+/home/travis/virtualenv/python2.7.8/lib/python2.7/site-packages/bakery_lint/tests/metadata_test.py:141: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  self.assertTrue(designer in designers,
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_designer_exists_in_profiles_csv(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_fonts_items_dicts(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_fonts_key_list(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_fonts_no_dupes(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_has_unique_style_weight_pairs(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_keys(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_license(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_no_unknown_top_keys(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_subsets_key_list(): OK
+bakery_lint.tests.metadata_test.MetadataTest.test_metadata_top_keys_types(): OK
+bakery_lint.tests.downstream.test_metadata_font_copyright.CheckMetadataContainsReservedFontName.test_copyright_contains_correct_rfn(): FAIL
+bakery_lint.tests.downstream.test_metadata_font_copyright.CheckMetadataContainsReservedFontName.test_copyright_is_consistent_across_family(): FAIL
+bakery_lint.tests.downstream.test_metadata_font_copyright.CheckMetadataContainsReservedFontName.test_copyright_matches_pattern(): FAIL
+bakery_lint.tests.downstream.test_metadata_font_copyright.CheckMetadataContainsReservedFontName.test_metadata_copyright_size(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.TestFontOnDiskFamilyEqualToMetadataJSON.test_font_on_disk_family_equal_in_metadata_json(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.TestPostScriptNameInMetadataEqualFontOnDisk.test_postscriptname_in_metadata_equal_to_font_on_disk(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_font_name_matches_family(): ERROR
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_family_values_are_all_the_same(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_filename_matches_postscriptname(): FAIL
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_font_have_regular(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_fonts_fields_have_fontname(): ERROR
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_fullname_is_equal_to_internal_font_fullname(): ERROR
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_fullname_matches_postScriptName(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_regular_is_400(): OK
+bakery_lint.tests.downstream.test_metadata_agreements.CheckMetadataAgreements.test_metadata_regular_is_normal(): OK
+bakery_lint.tests.downstream.test_check_text_files_exist.CheckTextFilesExist.test_copyrighttxt_exists(): FAIL
+bakery_lint.tests.downstream.test_check_text_files_exist.CheckTextFilesExist.test_description_exists(): OK
+bakery_lint.tests.downstream.test_check_text_files_exist.CheckTextFilesExist.test_fontlogtxt_exists(): FAIL
+bakery_lint.tests.downstream.test_check_text_files_exist.CheckTextFilesExist.test_licensetxt_exists(): FAIL
+bakery_lint.tests.downstream.test_check_subsets_exists.CheckSubsetsExist.test_check_subsets_exists(): FAIL
+bakery_lint.tests.downstream.test_check_monospace_agreements.CheckMonospaceAgreement.test_check_monospace_agreement(): OK
+bakery_lint.tests.downstream.test_check_metadata_style_matches_names.CheckItalicStyleMatchesMacStyle.test_check_italic_style_matches_names(): ERROR
+bakery_lint.tests.downstream.test_check_metadata_style_matches_names.CheckNormalStyleMatchesMacStyle.test_check_normal_style_matches_names(): ERROR
+bakery_lint.tests.downstream.test_check_metadata_matches_nametable.CheckMetadataMatchesNameTable.test_check_metadata_matches_nametable(): ERROR
+bakery_lint.tests.downstream.test_check_metadata_fields.CheckMetadataFields.test_check_metadata_fields(): OK
+bakery_lint.tests.downstream.test_check_menu_contains_proper_glyphs.CheckMenuSubsetContainsProperGlyphs.test_check_menu_contains_proper_glyphs(): ERROR
+bakery_lint.tests.downstream.test_check_glyph_consistency.CheckGlyphConsistencyInFamily.test_the_same_encodings_of_glyphs_across_family(): ERROR
+bakery_lint.tests.downstream.test_check_glyph_consistency.CheckGlyphConsistencyInFamily.test_the_same_names_of_glyphs_across_family(): ERROR
+bakery_lint.tests.downstream.test_check_glyph_consistency.CheckGlyphConsistencyInFamily.test_the_same_number_of_glyphs_across_family(): ERROR
+bakery_lint.tests.downstream.test_check_font_name_not_in_camelcase.CheckFontNameNotInCamelCase.test_fontname_not_in_camel_case(): OK
+bakery_lint.tests.downstream.test_check_files_menu_agreements.CheckFontsMenuAgreements.test_menu_file_agreement(): FAIL
+bakery_lint.tests.downstream.test_check_familyname_matches_fontnames.CheckFamilyNameMatchesFontNames.test_check_familyname_matches_fontnames(): OK
+bakery_lint.tests.downstream.test_check_canonical_weights.CheckCanonicalWeights.test_check_canonical_weights(): ERROR
+bakery_lint.tests.downstream.test_check_canonical_weights.CheckPostScriptNameMatchesWeight.test_postscriptname_contains_correct_weight(): OK
+bakery_lint.tests.downstream.test_check_canonical_weights.CheckFontWeightSameAsInMetadata.test_font_weight_same_as_in_metadata(): ERROR
+bakery_lint.tests.downstream.test_check_canonical_weights.CheckFullNameEqualCanonicalName.test_metadata_contains_current_font(): ERROR
+bakery_lint.tests.downstream.test_check_canonical_styles.CheckCanonicalStyles.test_check_canonical_styles(): ERROR
+bakery_lint.tests.downstream.test_check_canonical_filenames.CheckCanonicalFilenames.test_check_canonical_filenames(): FAIL
+{
+  "name": "Old Standard TT", 
+  "designer": "Alexey Kryukov", 
+  "license": "OFL", 
+  "visibility": "External", 
+  "category": "Serif", 
+  "size": 32103, 
+  "fonts": [
+    {
+      "name": "Old Standard TT", 
+      "postScriptName": "OldStandardTT-Bold", 
+      "fullName": "Old Standard TT Bold", 
+      "style": "normal", 
+      "weight": 700, 
+      "filename": "OldStandardTT-Bold.ttf", 
+      "copyright": "Copyright (C) 2006-2008 Alexey Kryukov <alexios@thessalonica.org.ru>"
+    }, 
+    {
+      "name": "Old Standard TT", 
+      "postScriptName": "OldStandardTT-Italic", 
+      "fullName": "Old Standard TT Italic", 
+      "style": "italic", 
+      "weight": 400, 
+      "filename": "OldStandardTT-Italic.ttf", 
+      "copyright": "Copyright (c) 2006-2008 by Alexey Kryukov"
+    }, 
+    {
+      "name": "Old Standard TT", 
+      "postScriptName": "OldStandardTT-Regular", 
+      "fullName": "Old Standard TT Regular", 
+      "style": "normal", 
+      "weight": 400, 
+      "filename": "OldStandardTT-Regular.ttf", 
+      "copyright": "Copyright (C) 2006-2008 Alexey Kryukov <alexios@thessalonica.org.ru>"
+    }
+  ], 
+  "subsets": [
+    "latin", 
+    "menu"
+  ], 
+  "dateAdded": "2010-05-18"
+}

@@ -1,0 +1,100 @@
+Fonts
+  All fonts do NOT have the same character sets.
+  Font:
+    Common name: Old Standard TT
+    Sub family: Bold
+    Weight: bold
+    Fixed width: yes
+    Fixed sizes: yes
+    Copyright: Copyright (C) 2006-2008 Alexey Kryukov <alexios@thessalonica.org.ru>
+    License: This Font Software is Copyright (c) 2006 by Alexey Kryukov <alexios@thessalonica.org.ru>. All Rights Reserved.
+    License url: http://scripts.sil.org/OFL
+    Version: Version 2.0.2
+    Designer: Alexey Kryukov <alexios@thessalonica.org.ru>
+    Designer url: http://www.thessalonica.org.ru
+    Glyph count: 216
+    Character count: 215
+    Orthographies:
+        Orthography:
+          Common name: Subset latin
+          Support level: partial
+          Percent coverage: 94
+        Orthography:
+          Common name: Subset cyrillic-menu
+          Support level: fragmentary
+          Percent coverage: 33
+        Orthography:
+          Common name: Subset vietnamese-menu
+          Support level: partial
+          Percent coverage: 80
+        Orthography:
+          Common name: Subset greek-menu
+          Support level: fragmentary
+          Percent coverage: 23
+  Font:
+    Common name: Old Standard TT
+    Sub family: Italic
+    Style: italic
+    Weight: normal
+    Fixed width: yes
+    Fixed sizes: yes
+    Copyright: Copyright (c) 2006-2008 by Alexey Kryukov
+    License: Copyright (c) 2006-2008, Alexey Kryukov 
+    License url: http://scripts.sil.org/ofl
+    Version: Version 2.0.2
+    Designer: Alexey Kryukov <alexios@thessalonica.org.ru>
+    Designer url: http://www.thessalonica.org.ru
+    Glyph count: 216
+    Character count: 215
+    Orthographies:
+        Orthography:
+          Common name: Subset latin
+          Support level: partial
+          Percent coverage: 94
+        Orthography:
+          Common name: Subset cyrillic-menu
+          Support level: fragmentary
+          Percent coverage: 33
+        Orthography:
+          Common name: Subset vietnamese-menu
+          Support level: partial
+          Percent coverage: 80
+        Orthography:
+          Common name: Subset greek-menu
+          Support level: fragmentary
+          Percent coverage: 23
+  Font:
+    Common name: Old Standard TT
+    Sub family: Regular
+    Weight: normal
+    Fixed width: yes
+    Fixed sizes: yes
+    Copyright: Copyright (C) 2006-2008 Alexey Kryukov <alexios@thessalonica.org.ru>
+    License: Copyright (c) 2006-2008, Alexey Kryukov 
+    License url: http://scripts.sil.org/OFL
+    Version: Version 2.0.2
+    Designer: Alexey Kryukov <alexios@thessalonica.org.ru>
+    Designer url: http://www.thessalonica.org.ru
+    Glyph count: 219
+    Character count: 218
+    Orthographies:
+        Orthography:
+          Common name: Subset vietnamese
+          Support level: fragmentary
+          Percent coverage: 1
+        Orthography:
+          Common name: Subset latin
+          Support level: partial
+          Percent coverage: 94
+        Orthography:
+          Common name: Subset cyrillic-menu
+          Support level: fragmentary
+          Percent coverage: 33
+        Orthography:
+          Common name: Subset vietnamese-menu
+          Support level: partial
+          Percent coverage: 80
+        Orthography:
+          Common name: Subset greek-menu
+          Support level: fragmentary
+          Percent coverage: 23
